@@ -2,6 +2,7 @@ extends Node2D
 var in_area
 var follow= false
 var is_picked_up:bool = false
+var connected=false
 
 
 func _input(event: InputEvent) -> void:
