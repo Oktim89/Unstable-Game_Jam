@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://ctkjbfg4gx80v"]
+
+[ext_resource type="PackedScene" uid="uid://6kf8w2ohkt8r" path="res://wheel.tscn" id="1_tuion"]
+[ext_resource type="Texture2D" uid="uid://d16blkxeppd2u" path="res://icon.svg" id="2_41w0w"]
+
+[node name="PlayerCar" type="RigidBody2D" unique_id=196585849 groups=["Player"]]
+position = Vector2(133, 59)
+
+[node name="wheel" parent="." unique_id=759701332 instance=ExtResource("1_tuion")]
+position = Vector2(-39, -10)
+
+[node name="wheel2" parent="." unique_id=576157221 instance=ExtResource("1_tuion")]
+position = Vector2(166.34338, -11.1581955)
+
+[node name="Body" type="Sprite2D" parent="." unique_id=1133997143]
+position = Vector2(100, -13.500002)
+scale = Vector2(2.2031252, 0.6484375)
+texture = ExtResource("2_41w0w")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1205744787]
+position = Vector2(22.575003, -41.157692)
+scale = Vector2(1.8179349, 2.1826925)
+polygon = PackedVector2Array(-33.32077, -6.3418503, -33.32077, 31.226425, 119.59999, 30.768276, 119.59999, -6.7999997)
+
+[node name="PinJoint2D" type="PinJoint2D" parent="." unique_id=761684802]
+position = Vector2(-6, 27)
+node_a = NodePath("..")
+node_b = NodePath("../wheel")
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="." unique_id=205847404]
+position = Vector2(204, 27)
+node_a = NodePath("..")
+node_b = NodePath("../wheel2")

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://br8pye713tayo"]
+
+[ext_resource type="PackedScene" uid="uid://bm15rrgyvur8g" path="res://Map.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cxhpebwhsxjce" path="res://Player.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://ddvwgi14s08s3" path="res://Object.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://ctkjbfg4gx80v" path="res://joint_t.tscn" id="4_1bvp3"]
+
+[node name="Node2D" type="Node2D" unique_id=576843923]
+
+[node name="Map" parent="." unique_id=1019105759 instance=ExtResource("1_0xm2m")]
+position = Vector2(-3, 580)
+
+[node name="Player" parent="." unique_id=2008660532 instance=ExtResource("2_h2yge")]
+position = Vector2(679, 472)
+
+[node name="Object" parent="." unique_id=704945360 instance=ExtResource("3_h2yge")]
+position = Vector2(-21, -177)
+
+[node name="JointT" parent="." unique_id=921575546 instance=ExtResource("4_1bvp3")]
+position = Vector2(194, 128)

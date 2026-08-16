@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://6kf8w2ohkt8r"]
+
+[sub_resource type="Gradient" id="Gradient_3bktd"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8m8ww"]
+gradient = SubResource("Gradient_3bktd")
+fill_from = Vector2(0.114285715, 0.9285714)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_3bktd"]
+specular_texture = SubResource("GradientTexture2D_8m8ww")
+specular_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8m8ww"]
+radius = 0.7158363
+
+[node name="wheel" type="RigidBody2D" unique_id=759701332 groups=["player"]]
+position = Vector2(186, 92)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=53835702]
+position = Vector2(36.25, 34.25)
+scale = Vector2(69.5, 69.5)
+texture = SubResource("CanvasTexture_3bktd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1571231516]
+position = Vector2(36.25, 34.25)
+scale = Vector2(69.5, 69.5)
+shape = SubResource("CircleShape2D_8m8ww")
