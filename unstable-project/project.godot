@@ -18,6 +18,11 @@ config/features=PackedStringArray("4.7", "Forward Plus")
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[layer_names]
+
+2d_physics/layer_2="item"
+2d_physics/layer_3="mouse"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
