@@ -9,7 +9,11 @@ size = Vector2(122, 123)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
 size = Vector2(110, 114)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
+size = Vector2(41.5, 40.5)
+
 [node name="Item" type="RigidBody2D" unique_id=327066556]
+continuous_cd = 1
 script = ExtResource("1_0e48y")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=834744236]
@@ -26,5 +30,69 @@ collision_mask = 4
 shape = SubResource("RectangleShape2D_yf5fn")
 debug_color = Color(0.8186688, 0.37876055, 0.38687208, 0.41960785)
 
+[node name="Edge" type="Area2D" parent="." unique_id=2114964544]
+position = Vector2(83, 1)
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Edge" unique_id=133781535]
+shape = SubResource("RectangleShape2D_57qmd")
+
+[node name="ColorRect" type="ColorRect" parent="Edge/CollisionShape2D" unique_id=2138157945]
+offset_left = -19.25
+offset_top = -19.75
+offset_right = 20.75
+offset_bottom = 20.25
+
+[node name="Edge2" type="Area2D" parent="." unique_id=35758746]
+position = Vector2(0, -82)
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Edge2" unique_id=2122453921]
+shape = SubResource("RectangleShape2D_57qmd")
+
+[node name="ColorRect" type="ColorRect" parent="Edge2/CollisionShape2D" unique_id=1447155986]
+offset_left = -19.25
+offset_top = -19.75
+offset_right = 20.75
+offset_bottom = 20.25
+
+[node name="Edge3" type="Area2D" parent="." unique_id=889229762]
+position = Vector2(-85, -1)
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Edge3" unique_id=1096786210]
+shape = SubResource("RectangleShape2D_57qmd")
+
+[node name="ColorRect" type="ColorRect" parent="Edge3/CollisionShape2D" unique_id=429460266]
+offset_left = -19.25
+offset_top = -19.75
+offset_right = 20.75
+offset_bottom = 20.25
+
+[node name="Edge4" type="Area2D" parent="." unique_id=1050203640]
+position = Vector2(1, 83)
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Edge4" unique_id=673681452]
+shape = SubResource("RectangleShape2D_57qmd")
+
+[node name="ColorRect" type="ColorRect" parent="Edge4/CollisionShape2D" unique_id=1762161990]
+offset_left = -19.25
+offset_top = -19.75
+offset_right = 20.75
+offset_bottom = 20.25
+
 [connection signal="mouse_entered" from="MouseArea" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="MouseArea" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="area_entered" from="Edge" to="." method="_on_edge_area_entered"]
+[connection signal="area_exited" from="Edge" to="." method="_on_edge_area_exited"]
+[connection signal="area_entered" from="Edge2" to="." method="_on_edge_area_entered"]
+[connection signal="area_exited" from="Edge2" to="." method="_on_edge_area_exited"]
+[connection signal="area_entered" from="Edge3" to="." method="_on_edge_area_entered"]
+[connection signal="area_exited" from="Edge3" to="." method="_on_edge_area_exited"]
+[connection signal="area_entered" from="Edge4" to="." method="_on_edge_area_entered"]
+[connection signal="area_exited" from="Edge4" to="." method="_on_edge_area_exited"]

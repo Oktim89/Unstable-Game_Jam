@@ -1,14 +1,19 @@
 [gd_scene format=3 uid="uid://decp5uohf3biq"]
 
+[ext_resource type="Script" uid="uid://dwqsxw7qkpwrx" path="res://test_scene.gd" id="1_coq8p"]
 [ext_resource type="Texture2D" uid="uid://bqrclx2xtkkgq" path="res://icon.svg" id="1_ia1lp"]
+[ext_resource type="PackedScene" uid="uid://d1018bn2vr7k4" path="res://Item.tscn" id="2_sasra"]
 [ext_resource type="PackedScene" uid="uid://bow281as715ua" path="res://core.tscn" id="3_sasra"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(713, 49)
 
 [node name="TestLevel" type="Node2D" unique_id=724286775]
+script = ExtResource("1_coq8p")
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=512981359]
+position = Vector2(-244, -30)
+scale = Vector2(2.42, 2.42)
 
 [node name="Sprite2D" type="Sprite2D" parent="Floor" unique_id=1133252876]
 position = Vector2(294, 269)
@@ -19,9 +24,12 @@ texture = ExtResource("1_ia1lp")
 position = Vector2(293, 268)
 shape = SubResource("RectangleShape2D_g4v7s")
 
-[node name="Core" parent="." unique_id=2081649661 instance=ExtResource("3_sasra")]
-position = Vector2(291, 67)
+[node name="Item" parent="." unique_id=327066556 instance=ExtResource("2_sasra")]
+position = Vector2(821, 446)
+freeze_mode = 0
 
-[node name="Core2" parent="." unique_id=1375182020 instance=ExtResource("3_sasra")]
-position = Vector2(539, 95)
-rotation = 3.127938
+[node name="Core" parent="." unique_id=2081649661 instance=ExtResource("3_sasra")]
+position = Vector2(397, 456)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1970450645]
+position = Vector2(618, 403)
