@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://ddvwgi14s08s3"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_80yui"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_80yui"]
+size = Vector2(35.671448, 37.000244)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_krg6j"]
+
+[node name="Node2D" type="Node2D" unique_id=704945360]
+position = Vector2(40.000008, 59)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1392323661]
+position = Vector2(-850.9999, 238)
+rotation = -0.23212878
+collision_layer = 2
+collision_mask = 7
+mass = 0.05
+physics_material_override = SubResource("PhysicsMaterial_80yui")
+linear_damp = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1508125118]
+position = Vector2(1416.7964, 489.90924)
+rotation = 1.8029251
+shape = SubResource("RectangleShape2D_80yui")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=327300522]
+position = Vector2(1415.8218, 489.7374)
+rotation = 1.8029251
+scale = Vector2(38.94218, 39.14059)
+texture = SubResource("CanvasTexture_krg6j")
