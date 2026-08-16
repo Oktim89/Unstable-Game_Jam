@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ctkjbfg4gx80v"]
 
 [ext_resource type="PackedScene" uid="uid://6kf8w2ohkt8r" path="res://wheel.tscn" id="1_tuion"]
-[ext_resource type="Texture2D" uid="uid://d16blkxeppd2u" path="res://icon.svg" id="2_41w0w"]
+[ext_resource type="Texture2D" uid="uid://bqrclx2xtkkgq" path="res://icon.svg" id="2_41w0w"]
 
 [node name="PlayerCar" type="RigidBody2D" unique_id=196585849 groups=["Player"]]
 position = Vector2(133, 59)

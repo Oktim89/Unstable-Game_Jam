@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ddera6gd7we03"]
+
+[ext_resource type="PackedScene" uid="uid://decp5uohf3biq" path="res://test_scene.tscn" id="1_jgtdm"]
+[ext_resource type="PackedScene" uid="uid://ctkjbfg4gx80v" path="res://joint_t.tscn" id="2_5acgc"]
+[ext_resource type="Script" uid="uid://dj36pk46whmlx" path="res://joint_t.gd" id="3_k13wi"]
+
+[node name="TestLevel" unique_id=724286775 instance=ExtResource("1_jgtdm")]
+
+[node name="Floor" parent="." index="0" unique_id=512981359]
+position = Vector2(-144.99998, 17)
+
+[node name="Core" parent="." index="3" unique_id=2081649661]
+position = Vector2(403, 427)
+
+[node name="PlayerCar" parent="." index="5" unique_id=196585849 instance=ExtResource("2_5acgc")]
+position = Vector2(299, 544)
+script = ExtResource("3_k13wi")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="." index="6" unique_id=984607010]
+position = Vector2(406, 498)
+node_a = NodePath("../PlayerCar")
+node_b = NodePath("../Core")

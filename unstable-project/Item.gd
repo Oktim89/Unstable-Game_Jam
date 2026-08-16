@@ -1,4 +1,5 @@
 extends RigidBody2D
+
 var in_mouse_area
 var follow= false
 var is_picked_up:bool = false
@@ -10,7 +11,7 @@ var parent_pos
 
 func _ready() -> void:
 	level_parent =get_parent()
-	
+	 
 func _input(event: InputEvent) -> void:
 
 		if event is InputEventMouseButton:
