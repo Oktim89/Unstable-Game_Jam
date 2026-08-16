@@ -5,7 +5,7 @@ var connected= false
 var parent:Node = null
 var in_connected_area
 var  level_parent:Node 
-@onready var right_spring: DampedSpringJoint2D= $Edge/RightSpring
+@onready var right_spring:PinJoint2D= $Edge/RightSpring
 
 
 
@@ -55,9 +55,12 @@ func _on_mouse_area_mouse_exited() -> void:
 
 func _on_child_entered_tree(node: Node) -> void:
 	if node is RigidBody2D:
+		
 		right_spring.node_a=node.get_path()
 		var distance  = (global_position.length()-node.global_position.length())
-		right_spring.rest_length=abs(distance)
+		
+
+	
 		
 
 	

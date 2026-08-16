@@ -38,13 +38,11 @@ offset_top = -20.0
 offset_right = 20.5
 offset_bottom = 20.0
 
-[node name="RightSpring" type="DampedSpringJoint2D" parent="Edge" unique_id=1458711657]
-position = Vector2(4, 3)
+[node name="RightSpring" type="PinJoint2D" parent="Edge" unique_id=833885073]
+position = Vector2(1, -1)
 rotation = -1.5684603
 node_b = NodePath("../..")
-length = 100.0
-stiffness = 9.7
-damping = 0.01
+disable_collision = false
 
 [node name="Edge2" type="Area2D" parent="." unique_id=819035723]
 position = Vector2(0, -92)
@@ -67,6 +65,9 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MouseArea" unique_id=1568654620]
 position = Vector2(-1.5, -1)
 shape = SubResource("RectangleShape2D_d0u6y")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1452647956]
+position = Vector2(173, 0)
 
 [connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
 [connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
