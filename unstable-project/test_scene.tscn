@@ -24,9 +24,23 @@ texture = ExtResource("1_ia1lp")
 position = Vector2(293, 268)
 shape = SubResource("RectangleShape2D_g4v7s")
 
+[node name="Floor2" type="StaticBody2D" parent="." unique_id=714261384]
+position = Vector2(-145, 544)
+rotation = -1.5707964
+scale = Vector2(0.18, 1.035)
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor2" unique_id=429669321]
+position = Vector2(294, 269)
+scale = Vector2(5.566626, 0.4092878)
+texture = ExtResource("1_ia1lp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2" unique_id=57021076]
+position = Vector2(293, 268)
+shape = SubResource("RectangleShape2D_g4v7s")
+
 [node name="Item" parent="." unique_id=327066556 instance=ExtResource("2_sasra")]
 position = Vector2(821, 446)
-freeze_mode = 0
+lock_rotation = true
 
 [node name="Core" parent="." unique_id=2081649661 instance=ExtResource("3_sasra")]
 position = Vector2(397, 456)

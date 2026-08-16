@@ -15,24 +15,29 @@ func _input(event: InputEvent) -> void:
 
 		if event is InputEventMouseButton:
 				if in_mouse_area and event.button_index==1 and event.pressed:
-					gravity_scale=0.0
+					sleeping=true
+					freeze=true
 					follow=true
+					gravity_scale=0.0
+					linear_velocity=Vector2.ZERO
 				elif event.is_released() and in_mouse_area:
 					follow=false
+					linear_velocity=Vector2.ONE
+					freeze=false
 					gravity_scale=1.0
-					self.freeze=false
 					attach_to_parent()
 func _process(delta: float) -> void:
-	
+	print(linear_velocity)
 	if follow:
 		global_position = get_global_mouse_position()
+		linear_velocity=Vector2.ZERO
 	
 	else:
 		if parent!=null:
 			
 			parent=null
 			parent_pos=null
-			
+		
 			
 
 		
@@ -63,6 +68,9 @@ func attach_to_parent():
 		sleeping=false
 		return
 	self.reparent(parent,true)
+	gravity_scale=1.0
+	sleeping=false
+	
 	connected=true
 	
 	
