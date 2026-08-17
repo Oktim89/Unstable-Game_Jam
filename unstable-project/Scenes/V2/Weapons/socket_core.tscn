@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://wi3lm4wkoo7i"]
+
+[ext_resource type="PackedScene" uid="uid://ctnlxpyddgle4" path="res://Scenes/V2/Weapons/weapon.tscn" id="1_r5mqb"]
+[ext_resource type="Script" uid="uid://dbj6el6nfqfax" path="res://Scripts/socket_core.gd" id="2_tbf76"]
+
+[node name="SocketCore" unique_id=409941052 instance=ExtResource("1_r5mqb")]
+script = ExtResource("2_tbf76")
+
+[node name="Sprite2D" parent="." index="0" unique_id=1312239855]
+scale = Vector2(3, 3)
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=1850786269]
+position = Vector2(1.9999999, 2)
+scale = Vector2(3.5, 3.5)
+
+[node name="MouseArea" parent="." index="2" unique_id=497377547]
+scale = Vector2(3, 3)
+
+[node name="Socket" type="Node2D" parent="." index="3" unique_id=497834296]
+position = Vector2(18, -131)
+
+[node name="Edge" parent="." index="4" unique_id=622757629]
+position = Vector2(15, -134)
+
+[node name="Blocker" parent="." index="5" unique_id=1444980021]
+mouse_filter = 2
+
+[connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
+[connection signal="mouse_entered" from="MouseArea" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="MouseArea" to="." method="_on_area_2d_mouse_exited"]
