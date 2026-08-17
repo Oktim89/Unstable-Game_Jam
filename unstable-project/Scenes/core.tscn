@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bow281as715ua"]
 
-[ext_resource type="Script" uid="uid://dk1nfl2y0tkpg" path="res://core.gd" id="1_tvpqx"]
+[ext_resource type="Script" uid="uid://dk1nfl2y0tkpg" path="res://Scripts/core.gd" id="1_tvpqx"]
 [ext_resource type="Texture2D" uid="uid://bqrclx2xtkkgq" path="res://icon.svg" id="2_05t4c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
@@ -38,7 +38,7 @@ offset_top = -20.0
 offset_right = 20.5
 offset_bottom = 20.0
 
-[node name="RightSpring" type="PinJoint2D" parent="Edge" unique_id=833885073]
+[node name="RightSpring" type="DampedSpringJoint2D" parent="Edge" unique_id=405039590]
 position = Vector2(1, -1)
 rotation = -1.5684603
 node_b = NodePath("../..")
@@ -65,9 +65,6 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MouseArea" unique_id=1568654620]
 position = Vector2(-1.5, -1)
 shape = SubResource("RectangleShape2D_d0u6y")
-
-[node name="Marker2D" type="Marker2D" parent="." unique_id=1452647956]
-position = Vector2(173, 0)
 
 [connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
 [connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]

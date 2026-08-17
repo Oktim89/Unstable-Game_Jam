@@ -5,7 +5,7 @@ var connected= false
 var parent:Node = null
 var in_connected_area
 var  level_parent:Node 
-@onready var right_spring:PinJoint2D= $Edge/RightSpring
+@onready var right_spring:DampedSpringJoint2D= $Edge/RightSpring
 
 
 
@@ -20,8 +20,8 @@ func _input(event: InputEvent) -> void:
 		if event is InputEventMouseButton:
 				if in_mouse_area and event.button_index==1 and event.pressed:
 				
-					sleeping=true
-					freeze=true
+					#sleeping=true
+					#freeze=true
 					follow=true
 					gravity_scale=0.0
 					linear_velocity=Vector2.ZERO
@@ -38,7 +38,7 @@ func _input(event: InputEvent) -> void:
 func _process(delta: float) -> void:
 	if follow:
 		position = get_global_mouse_position()
-		linear_velocity=Vector2.ZERO
+		
 
 
 
@@ -57,7 +57,8 @@ func _on_child_entered_tree(node: Node) -> void:
 	if node is RigidBody2D:
 		
 		right_spring.node_a=node.get_path()
-		var distance  = (global_position.length()-node.global_position.length())
+		var distance  = abs(global_position.length()-node.global_position.length())
+		right_spring.rest_length=distance+10.0
 		
 
 	
