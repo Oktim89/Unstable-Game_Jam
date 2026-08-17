@@ -28,7 +28,6 @@ func _input(event: InputEvent) -> void:
 					gravity_scale=1.0
 					attach_to_parent()
 func _process(delta: float) -> void:
-	print(linear_velocity)
 	if follow:
 		global_position = get_global_mouse_position()
 		linear_velocity=Vector2.ZERO
