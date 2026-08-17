@@ -22,6 +22,10 @@ window/stretch/aspect="expand"
 
 enabled=PackedStringArray("res://addons/softbody2d/plugin.cfg")
 
+[global_group]
+
+Weapon="Group for Weapons to equip on the core"
+
 [layer_names]
 
 2d_physics/layer_2="item"

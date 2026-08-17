@@ -1,7 +1,20 @@
 [gd_scene format=3 uid="uid://bnfnuiou2fox"]
 
 [ext_resource type="PackedScene" uid="uid://cu2xm6uykso0j" path="res://Scenes/Map/floor.tscn" id="1_q10lm"]
+[ext_resource type="PackedScene" uid="uid://ctnlxpyddgle4" path="res://Scenes/V2/Weapons/weapon.tscn" id="2_q5n1e"]
+[ext_resource type="PackedScene" uid="uid://wi3lm4wkoo7i" path="res://Scenes/V2/Weapons/socket_core.tscn" id="3_aq7db"]
 
 [node name="SceneForSocket" type="Node2D" unique_id=1595258237]
 
 [node name="Floor" parent="." unique_id=1206507712 instance=ExtResource("1_q10lm")]
+
+[node name="Weapon" parent="." unique_id=409941052 instance=ExtResource("2_q5n1e")]
+position = Vector2(439, 490)
+
+[node name="SocketCore" parent="." unique_id=1262897486 instance=ExtResource("3_aq7db")]
+modulate = Color(0, 0, 1, 1)
+position = Vector2(1148, 505)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=428583653]
+position = Vector2(573, 473)
+zoom = Vector2(0.44, 0.44)
