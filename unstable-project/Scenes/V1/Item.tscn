@@ -13,6 +13,7 @@ size = Vector2(110, 114)
 size = Vector2(41.5, 40.5)
 
 [node name="Item" type="RigidBody2D" unique_id=327066556]
+mass = 1.274
 script = ExtResource("1_0e48y")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=834744236]

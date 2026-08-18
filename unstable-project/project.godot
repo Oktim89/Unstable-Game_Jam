@@ -44,6 +44,7 @@ right={
 2d_physics/layer_2="item"
 2d_physics/layer_3="mouse"
 2d_physics/layer_4="edge"
+2d_physics/layer_7="SoftBodyT"
 
 [physics]
 

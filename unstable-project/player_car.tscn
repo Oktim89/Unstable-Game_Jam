@@ -3,9 +3,16 @@
 [ext_resource type="PackedScene" uid="uid://ctkjbfg4gx80v" path="res://Scenes/joint_t.tscn" id="1_dnlqt"]
 
 [node name="PlayerCar" unique_id=196585849 instance=ExtResource("1_dnlqt")]
+mass = 5.456
 
 [node name="wheel" parent="." index="0" unique_id=759701332]
 position = Vector2(-39, 7)
 
 [node name="wheel2" parent="." index="1" unique_id=576157221]
 position = Vector2(169, 7)
+
+[node name="Body" parent="." index="2" unique_id=1133997143]
+position = Vector2(103.399994, -33.6)
+
+[node name="CollisionPolygon2D" parent="." index="3" unique_id=1205744787]
+position = Vector2(25.974997, -61.25769)

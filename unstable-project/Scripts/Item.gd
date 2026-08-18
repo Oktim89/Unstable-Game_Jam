@@ -57,17 +57,17 @@ func _on_area_2d_mouse_exited() -> void:
 func attach_to_parent():
 	if !in_connected_area:
 		print("Not in edge area")
-		reparent(level_parent)
+		#reparent(level_parent)
 		parent=null
 		sleeping=false
 		return
 	if parent==null:
 		print("No parent found")
-		reparent(level_parent)
+		#reparent(level_parent)
 		parent=null
 		sleeping=false
 		return
-	self.reparent(parent,true)
+	#self.reparent(parent,true)
 	gravity_scale=1.0
 	sleeping=false
 	
