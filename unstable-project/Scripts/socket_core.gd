@@ -2,6 +2,7 @@ extends RigidBody2D
 class_name SocketCore
 
 
+
 var in_mouse_area
 var follow= false
 var is_picked_up:bool = false
@@ -87,6 +88,7 @@ func attach_to_socket():
 			#add_child(parent)
 			print("Socket")
 			attached=true
+			
 			return true
 	return false
 		

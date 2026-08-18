@@ -2,6 +2,7 @@ extends RigidBody2D
 class_name Weapon
 
 
+
 var in_mouse_area
 var follow= false
 var is_picked_up:bool = false
