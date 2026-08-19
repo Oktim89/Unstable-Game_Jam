@@ -44,12 +44,10 @@ right={
 2d_physics/layer_2="item"
 2d_physics/layer_3="mouse"
 2d_physics/layer_4="edge"
-<<<<<<< Updated upstream
-2d_physics/layer_7="SoftBodyT"
-=======
 2d_physics/layer_5="Core"
 2d_physics/layer_6="Weapons"
->>>>>>> Stashed changes
+2d_physics/layer_7="SoftBodyT"
+<<<<<<<Updatedupstream2d_physics/layer_7="SoftBodyT"
 
 [physics]
 
