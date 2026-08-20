@@ -478,6 +478,7 @@ script = ExtResource("3_k13wi")
 
 [node name="SoftBody2D3" parent="." index="6" unique_id=917397249 instance=ExtResource("5_k13wi")]
 position = Vector2(336, 325)
+bias = 2.0
 
 [node name="SoftBody2D" type="Polygon2D" parent="." index="7" unique_id=194780954]
 position = Vector2(756.99994, 208)
