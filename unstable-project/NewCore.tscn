@@ -238,10 +238,6 @@ size = Vector2(121, 122)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n4mrm"]
 size = Vector2(35, 38)
 
-[sub_resource type="Curve" id="Curve_3yv63"]
-_data = [Vector2(0.040000007, 0.07438016), 0.0, 0.0, 0, 0, Vector2(0.255, 0.29752064), 0.0, 0.0, 0, 0, Vector2(0.67749995, 0.40220386), 0.0, 0.0, 0, 0, Vector2(0.915, 0.6336088), 0.0, 0.0, 0, 0, Vector2(0.99999, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.8429752), 0.0, 0.0, 0, 0]
-point_count = 6
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fqd0w"]
 resource_local_to_scene = true
 
@@ -598,8 +594,7 @@ metadata/_local_pose_override_enabled_ = true
 position = Vector2(-19.814209, -20.87024)
 rotation = -2.399796
 points = PackedVector2Array(0, 0)
-width = 20.0
-width_curve = SubResource("Curve_3yv63")
+closed = true
 default_color = Color(0.7135374, 0.16133201, 0.31718802, 1)
 
 [node name="Edge" type="Area2D" parent="Skeleton2D/Bone-22" unique_id=132127422]
