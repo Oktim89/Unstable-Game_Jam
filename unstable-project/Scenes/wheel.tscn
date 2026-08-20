@@ -1,19 +1,16 @@
 [gd_scene format=3 uid="uid://6kf8w2ohkt8r"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8m8ww"]
-radius = 0.7158363
+[ext_resource type="Texture2D" uid="uid://cmftenwalxg0h" path="res://Assets/wheelTEXTURE.png" id="1_y7iat"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_ab3aj"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_8m8ww"]
+radius = 17.0
 
 [node name="wheel" type="RigidBody2D" unique_id=759701332 groups=["player"]]
-position = Vector2(186, 92)
+texture_filter = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1571231516]
-position = Vector2(35, 32)
-scale = Vector2(69.5, 69.5)
 shape = SubResource("CircleShape2D_8m8ww")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1084084654]
-position = Vector2(34.999996, 31.999996)
-scale = Vector2(71.99999, 68.00001)
-texture = SubResource("CanvasTexture_ab3aj")
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("1_y7iat")
