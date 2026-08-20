@@ -323,7 +323,7 @@ scale = Vector2(1.0000025, 0.99999964)
 
 [node name="Bone-9" parent="Core/SoftBody2D/Skeleton2D" index="9" unique_id=488522467]
 position = Vector2(77.94226, 7.5)
-scale = Vector2(0.9999999, 0.999999)
+scale = Vector2(0.9999998, 0.999999)
 
 [node name="Bone-10" parent="Core/SoftBody2D/Skeleton2D" index="10" unique_id=838357769]
 position = Vector2(51.961548, 15)
@@ -369,7 +369,7 @@ position = Vector2(103.92297, 45)
 
 [node name="Bone-22" parent="Core/SoftBody2D/Skeleton2D" index="22" unique_id=737882030]
 position = Vector2(120.291626, 60)
-scale = Vector2(1, 0.99999905)
+scale = Vector2(0.99999994, 0.99999905)
 
 [node name="Bone-23" parent="Core/SoftBody2D/Skeleton2D" index="23" unique_id=1533349251]
 position = Vector2(103.92297, 75)
