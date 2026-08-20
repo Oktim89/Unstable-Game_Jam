@@ -238,6 +238,10 @@ size = Vector2(121, 122)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n4mrm"]
 size = Vector2(35, 38)
 
+[sub_resource type="Curve" id="Curve_3yv63"]
+_data = [Vector2(0.040000007, 0.07438016), 0.0, 0.0, 0, 0, Vector2(0.255, 0.29752064), 0.0, 0.0, 0, 0, Vector2(0.67749995, 0.40220386), 0.0, 0.0, 0, 0, Vector2(0.915, 0.6336088), 0.0, 0.0, 0, 0, Vector2(0.99999, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.8429752), 0.0, 0.0, 0, 0]
+point_count = 6
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fqd0w"]
 resource_local_to_scene = true
 
@@ -268,7 +272,7 @@ shape = SubResource("RectangleShape2D_doff7")
 [node name="Bone-0" type="Bone2D" parent="Skeleton2D" unique_id=2045272605]
 position = Vector2(26.26944, 7.5)
 rotation = 1.5836248
-scale = Vector2(0.9999824, 0.9999824)
+scale = Vector2(0.99998236, 0.99998236)
 rest = Transform2D(-0.012828519, 0.9999177, -0.9999177, -0.012828519, 26.269436, 7.5)
 auto_calculate_length_and_angle = false
 length = 30.0
@@ -591,6 +595,14 @@ metadata/connected_nodes_paths = [NodePath("Bone-20"), NodePath("Bone-21"), Node
 metadata/connected_nodes_idx = [20, 21, 23, 24]
 metadata/_local_pose_override_enabled_ = true
 
+[node name="Line2D" type="Line2D" parent="Skeleton2D/Bone-22" unique_id=1038552717]
+position = Vector2(-19.814209, -20.87024)
+rotation = -2.399796
+points = PackedVector2Array(0, 0)
+width = 20.0
+width_curve = SubResource("Curve_3yv63")
+default_color = Color(0.7135374, 0.16133201, 0.31718802, 1)
+
 [node name="Edge" type="Area2D" parent="Skeleton2D/Bone-22" unique_id=132127422]
 position = Vector2(-19.87584, -22.283081)
 rotation = -2.399796
@@ -608,7 +620,7 @@ offset_right = 20.5
 offset_bottom = 20.0
 metadata/_edit_use_anchors_ = true
 
-[node name="RightSpring" type="PinJoint2D" parent="Skeleton2D/Bone-22/Edge" unique_id=322417682]
+[node name="RightSpring" type="DampedSpringJoint2D" parent="Skeleton2D/Bone-22/Edge" unique_id=749602368]
 position = Vector2(1, -1)
 rotation = -1.5684603
 node_b = NodePath("../../../../Bone-22")
@@ -644,7 +656,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-25" type="Bone2D" parent="Skeleton2D" unique_id=2143494570]
 position = Vector2(103.923035, 105)
 rotation = 1.5724025
-scale = Vector2(0.99983495, 0.99983495)
+scale = Vector2(0.9998349, 0.9998349)
 rest = Transform2D(-0.0016061498, 0.9999987, -0.9999987, -0.0016061498, 103.92305, 105)
 auto_calculate_length_and_angle = false
 length = 30.0

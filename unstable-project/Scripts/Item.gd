@@ -37,8 +37,8 @@ func _process(delta: float) -> void:
 			
 			parent=null
 			parent_pos=null
-		
-			
+	
+
 
 		
 		
