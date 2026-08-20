@@ -94,15 +94,14 @@ func _on_edge_area_entered(area: Area2D) -> void:
 
 func _on_edge_area_exited(area: Area2D) -> void:
 	print("Left the edge")
-	right_spring.node_a=""
-	connected_node=null
-	spring_line.visible=false
+	#right_spring.node_a=""
+	#connected_node=null
+	#spring_line.visible=false
 func update_spring():
 	var start = spring_line.to_local(connected_node.global_position)
 	var end = spring_line.to_local(bone_22.global_position)
 
-	spring_line.set_point_position(0, end)
-	spring_line.set_point_position(1, start)
+	
 	var direction = end - start
 	var spring_length = direction.length()
 	if spring_length < 0.001:
