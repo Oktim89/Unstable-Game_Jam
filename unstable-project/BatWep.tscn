@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cmb3jaryko4yt"]
+
+[ext_resource type="Texture2D" uid="uid://qer0mw1yqnax" path="res://Assets/baseballbatTEXTURE.png" id="1_2aodk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kls7o"]
+size = Vector2(177, 36)
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=1982654028]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=270346316]
+position = Vector2(-199, -225)
+rotation = 1.5707964
+scale = Vector2(0.124282986, 0.2829828)
+texture = ExtResource("1_2aodk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=590394971]
+position = Vector2(-152.5, -227)
+shape = SubResource("RectangleShape2D_kls7o")

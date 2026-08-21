@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://bqrclx2xtkkgq" path="res://icon.svg" id="1_3yv63"]
 [ext_resource type="Script" uid="uid://ber5wefgesihh" path="res://NewCoreCode.gd" id="2_3yv63"]
+[ext_resource type="PackedScene" uid="uid://cmb3jaryko4yt" path="res://BatWep.tscn" id="3_n52as"]
+[ext_resource type="Script" uid="uid://bitbapp4khlr6" path="res://bat_wep.gd" id="4_6okf1"]
 
 [sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_6okf1"]
 resource_local_to_scene = true
@@ -607,7 +609,7 @@ collision_mask = 8
 position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_n4mrm")
 
-[node name="ColorRect" type="ColorRect" parent="Skeleton2D/Bone-22/Edge/CollisionShape2D" unique_id=1117009223]
+[node name="ColorRect22" type="ColorRect" parent="Skeleton2D/Bone-22/Edge/CollisionShape2D" unique_id=1117009223]
 offset_left = -19.5
 offset_top = -20.0
 offset_right = 20.5
@@ -2156,6 +2158,17 @@ rotation = -3.1399856
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-25")
 softness = 60.0
+
+[node name="RigidBody2D" parent="." unique_id=1982654028 instance=ExtResource("3_n52as")]
+position = Vector2(475, 291)
+mass = 0.455
+angular_velocity = 0.6595599
+script = ExtResource("4_6okf1")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="RigidBody2D" unique_id=1232624900]
+position = Vector2(-326, -228)
+node_a = NodePath("../../Bone-22")
+node_b = NodePath("..")
 
 [connection signal="area_entered" from="Skeleton2D/MouseArea" to="." method="_on_mouse_area_area_entered"]
 [connection signal="area_exited" from="Skeleton2D/MouseArea" to="." method="_on_mouse_area_area_exited"]
